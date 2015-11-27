@@ -2,6 +2,21 @@
 import getpass
 import pg8000
 
+
+
+#############################################################################
+# Functions
+#############################################################################
+def displayCities():
+    query = """SELECT arrival_location FROM flight_data"""
+    cursor.execute(query,)
+    results = cursor.fetchall()
+    #print albums
+    for row in results:
+        city = row
+        print(city)
+#############################################################################
+
 login = input('login: ')
 secret = getpass.getpass('password: ')
 
@@ -21,6 +36,9 @@ except pg8000.Error as e:
 #db.autocommit = True
 
 cursor = db.cursor()
+
+displayCities()
+
 
 
 cursor.close()
