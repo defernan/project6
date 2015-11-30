@@ -18,9 +18,11 @@ def displayCities():
         print(ID, "|", name)
 #############################################################################
 
-login = input('login: ')
-secret = getpass.getpass('password: ')
+#login = input('login: ')
+#secret = getpass.getpass('password: ')
 
+login = 'defernan'
+secret = 'ddf659'
 credentials = {'user'    : login, 
                'password': secret, 
                'database': 'csci403',
