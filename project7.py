@@ -8,13 +8,13 @@ import pg8000
 # Functions
 #############################################################################
 def displayCities():
-    query = """SELECT arrival_location FROM flight_data"""
+    query = """SELECT name FROM airports"""
     cursor.execute(query,)
     results = cursor.fetchall()
     #print albums
     for row in results:
-        city = row
-        print(city)
+        name = row
+        print(name)
 #############################################################################
 
 login = input('login: ')
